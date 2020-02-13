@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--    <link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fm.revealator.jquery.css" />
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/personal-area.css">
+</head>
+<body>
+
+<header class="header header--height">
+    <div class="container">
+        <div class="header-box">
+            <a href="index.html" class="header__logo"><img src="img/logo.png" alt=""></a>
+            <div class="header__name">Иванов Иван</div>
+            <a href="" class="header__out">Выйти</a>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="personal-clients.html">Клиенты</a></li>
+        <li><a href="personal-clients.html">ФОП Васильев И.И.</a></li>
+    </ul>
+</div>
+<div class="container">
+    <section class="personal">
+        <h2><span class="personal-name">ФОП Васильев И.И.</span> - <span class="personal-promo">225022547824</span></h2>
+<!--        <button class="header-button personal-button"><img src="img/pl.png" alt=""> Добавить клиента</button>-->
+            <div class="personal-tabs personal-tabs__name">
+                <input type="radio" name="odin" checked="checked" id="vkl1"/>
+                <label for="vkl1">Информация о клиенте</label>
+                <input type="radio" name="odin" id="vkl2"/>
+                <label for="vkl2">История заказов</label>
+                <input type="radio" name="odin" id="vkl3"/>
+                <label for="vkl3">Документы</label>
+                <div class="personal-tabs__info">
+                    <div class="personal-tabs__form">
+                        <div class="footer-form">
+                            <form action="#" id="form-enter" class="form-entrance form-entrance--color">
+                                <div class="form-entrance__name form-entrance__box">
+                                    <div class="form-entrance__item">
+                                        <span>Нзвание клиники или ФОПа</span>
+                                        <input class="form-entrance__input" id="name-enter" autocomplete="on" type="text" required
+                                               minlength="2" placeholder="Коваленко Василий Петрович ФОП">
+                                    </div>
+                                    <div class="form-entrance__item">
+                                        <span>Промокод</span>
+                                        <input class="form-entrance__input" id="name-promo" autocomplete="on" type="text" required
+                                               minlength="2" placeholder="225022547824">
+                                    </div>
+                                </div>
+                                <div class="form-entrance__email">
+                                    <span>Email</span>
+                                    <input class="form-entrance__input" id="email-enter" autocomplete="on" type="email" required
+                                           maxlength="20" placeholder="VP_Kovalenko@gmail.com">
+                                </div>
+                                <div class="form-entrance__cont">
+                                    <span>Номер телефона</span>
+                                    <input class="form-entrance__input" id="cont-enter" autocomplete="on" type="tel" pattern="+3[0-9]{3}-[0-9]{3}" required
+                                           minlength="6" placeholder="+38 012 345-67-89">
+                                </div>
+                                <div class="form-entrance__name-cl">
+                                    <span>Адрес клиники/ФОПа</span>
+                                    <input class="form-entrance__input" id="namecl-enter" autocomplete="on" type="text" required
+                                           minlength="2" placeholder="Украина,г.Киев,пр.Победы,123">
+                                </div>
+                                <div class="form-entrance__name-cl1">
+                                    <span>Адрес доставки</span>
+                                    <input class="form-entrance__input" id="namecl-enter1" autocomplete="on" type="text" required
+                                           minlength="2" placeholder="Украина,г.Киев,пр.Победы,123">
+                                </div>
+                                <div class="form-entrance__select">
+                                    <span>Способ доставки</span>
+                                    <select>
+                                        <option>Новая почта</option>
+                                        <option>Укрпочта</option>
+                                        <option>Мист експрес</option>
+                                    </select>
+                                </div>
+                                <div class="form-entrance__submit">
+                                    <button class="form-entrance__sub" type="submit" id="submit-enter"><span>Сохранить</span></button>
+                                    <button class="form-entrance__sub form-entrance__sub--color" type="submit" id="submit-chang"><span>Отменить</span></button>
+                                    <button class="form-entrance__sub form-entrance__sub--color" type="submit" id="submit-del"><span>Удалить клиента</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-tabs__story">
+                    <div class="describe-table">
+                        <div class="personal-tabs__show">
+                            <form action="#" id="form-search" class="form-search">
+                                <div class="form-search__box">
+                                    <div class="form-search__block-input">
+                                        <input class="form-search__input" id="search-orders" autocomplete="on" type="text" placeholder="Ведите запрос для поиска">
+                                        <button class="form-search__button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </div>
+                                    <button id="form-search-button1" class="header-button">Найти</button>
+                                </div>
+                            </form>
+                        </div>
+                        <table class="describe-table__table">
+                            <tbody>
+                            <tr>
+                                <th>Заказ</th>
+                                <th>Количество товаров</th>
+                                <th>Сума заказа</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="describe-table__table">
+                            <tbody>
+                            <tr class="table-tr">
+                                <td>Заказ №103-220619-ххх</td>
+                                <td>2</td>
+                                <td>1200,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td>Линзы контактные жесткие газопроницаемые для рефракционной терапии Paragon CRT 100</td>
+                                <td>1</td>
+                                <td>900,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td>Прибор для очистки всех видов контактных линз СЕ-3500</td>
+                                <td>1</td>
+                                <td>300,00грн.</td>
+                            </tr>
+                            <tr class="active-tr active-clone">
+                                <td></td>
+                                <td></td>
+                                <td><button class="describe-table__button">Повторить заказ</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="describe-table__table">
+                            <tbody>
+                            <tr class="table-tr">
+                                <td>Заказ №003-220619-ххх</td>
+                                <td>2</td>
+                                <td>1200,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td>Линзы контактные жесткие газопроницаемые для рефракционной терапии Paragon CRT 100</td>
+                                <td>1</td>
+                                <td>900,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td>Прибор для очистки всех видов контактных линз СЕ-3500</td>
+                                <td>1</td>
+                                <td>300,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td></td>
+                                <td></td>
+                                <td><button class="describe-table__button">Повторить заказ</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="describe-table__table">
+                            <tbody>
+                            <tr class="table-tr">
+                                <td>Заказ №003-220619-ххх</td>
+                                <td>2</td>
+                                <td>1200,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td>Линзы контактные жесткие газопроницаемые для рефракционной терапии Paragon CRT 100</td>
+                                <td>1</td>
+                                <td>900,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td>Прибор для очистки всех видов контактных линз СЕ-3500</td>
+                                <td>1</td>
+                                <td>300,00грн.</td>
+                            </tr>
+                            <tr class="active-tr">
+                                <td></td>
+                                <td></td>
+                                <td><button class="describe-table__button">Повторить заказ</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="personal-tabs__story personal-tabs__story--color">
+                    <div class="describe-table">
+                        <div class="personal-tabs__show">
+                            <form action="#" id="form-search1" class="form-search">
+                                <div class="form-search__box">
+                                    <div class="form-search__block-input">
+                                        <input class="form-search__input" id="search-order" autocomplete="on" type="text" placeholder="Ведите запрос для поиска">
+                                        <button class="form-search__button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </div>
+                                    <button id="form-search-button" class="header-button">Найти</button>
+                                </div>
+                            </form>
+                        </div>
+                        <table class="describe-table__table">
+                            <tbody>
+                            <tr>
+                                <th>Дата</th>
+                                <th>Документ</th>
+                            </tr>
+                            <tr class="table-tr table-get">
+                                <td>01.07.2019</td>
+                                <td>Своббодный заказ 01012019.xlsx</td>
+                            </tr>
+                            <tr class="table-tr table-get">
+                                <td>01.08.2019</td>
+                                <td>Свободный заказ 01012019.xlsx</td>
+                            </tr>
+                            <tr class="table-tr table-get">
+                                <td>01.08.2019</td>
+                                <td>Свободный заказ 01012019.xlsx</td>
+                            </tr>
+                            <tr class="table-tr table-get">
+                                <td>01.08.2019</td>
+                                <td>Свободный заказ 01012019.xlsx</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
+<div class="popup popup-partners popup-enter" style="display: none">
+    <div class="popup-block">
+        <h4>Вход</h4>
+        <h6>для входа введите промокод</h6>
+        <div class="personal-tabs__info">
+            <div class="personal-tabs__form">
+                <div class="footer-form">
+                    <form action="#" id="form-enter1" class="form-entrance form-entrance--color">
+                        <div class="form-entrance__cont">
+                            <input class="form-entrance__input" id="cont-enter1" autocomplete="on" type="text" required
+                                   minlength="5" placeholder="Ваш промокод">
+                            <span class="form-entrance__error">Вы ввели недействительный код</span>
+                        </div>
+                        <div class="form-entrance__submit">
+                            <button class="form-entrance__sub" type="submit" id="submit-enter1"><span>Войти</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup-appeal">
+            <p><strong>Если промокод утерян, вы можете восстановить его, обратившись к вашему менеджеру</strong></p>
+            <a href="tel:+380681234567">+38 068 123-45-67</a>
+            <p><strong>Иванов Иван</strong></p>
+        </div>
+        <div class="partners-closed">
+            <span>Закрыть<i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+    </div>
+</div>
+<div class="popup popup-partners popup-enter" style="display: none">
+    <div class="popup-block">
+        <h4>Спасибо за ваш заказ</h4>
+        <h6>Заказ сформирован и в ближайшее рабочее времья с вами свяжется менеджер для уточнения состояния заказа</h6>
+        <div class="partners-closed">
+            <span>Закрыть<i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+    </div>
+</div>
+<div class="popup popup-partners popup-enter popup-order" style="display: none">
+    <div class="popup-block">
+        <h4>Вы заказываете</h4>
+        <p class="popup-info">Линзы контактные жесткие газопроницаемые для рефракционной терапии роговой оболочки Paragon CRT 100</p>
+        <div class="popup-table">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                        <th>Сума заказа</th>
+                    </tr>
+                    <tr>
+                        <td class="popup-price"><span>500</span> грн.</td>
+                        <td><div class="popup-table__number"><button class="popup-table__button1">-</button><span>1</span><button class="popup-table__button2">+</button></div></td>
+                        <td class="popup-sum"><span>1500</span> грн.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        <h6>Информация для доставки товара</h6>
+        <div class="personal-tabs__info">
+              <div class="personal-tabs__form">
+                        <div class="footer-form footer-form--alight">
+                            <form action="#" id="form-enter_" class="form-entrance form-entrance--color">
+                                <div class="form-entrance__name">
+                                    <span>Нзвание клиники или ФОПа</span>
+                                    <input class="form-entrance__input" id="name-enter_" autocomplete="on" type="text" required
+                                           minlength="2" placeholder="Коваленко Василий Петрович ФОП">
+                                </div>
+                                <div class="form-entrance__email">
+                                    <span>Email</span>
+                                    <input class="form-entrance__input" id="email-enter_" autocomplete="on" type="email" required
+                                           maxlength="20" placeholder="VP_Kovalenko@gmail.com">
+                                </div>
+                                <div class="form-entrance__name">
+                                    <span>Номер телефона</span>
+                                    <input class="form-entrance__input" id="cont-enter_" autocomplete="on" type="number" required
+                                           minlength="6" placeholder="+38 012 345-67-89">
+                                </div>
+                                <div class="form-entrance__name-cl">
+                                    <span>Адрес клиники/ФОПа</span>
+                                    <input class="form-entrance__input" id="namecl-enter_" autocomplete="on" type="text" required
+                                           minlength="2" placeholder="Украина,г.Киев,пр.Победы,123">
+                                </div>
+                                <div class="form-entrance__name-cl1">
+                                    <span>Адрес доставки</span>
+                                    <input class="form-entrance__input" id="namecl-enter1_" autocomplete="on" type="text" required
+                                           minlength="2" placeholder="Украина,г.Киев,пр.Победы,123">
+                                </div>
+                                <div class="form-entrance__select">
+                                    <span>Способ доставки</span>
+                                    <select>
+                                        <option>Новая почта</option>
+                                        <option>Укрпочта</option>
+                                        <option>Мист експрес</option>
+                                    </select>
+                                </div>
+                                <div class="form-entrance__name-cl2">
+                                    <span>Коментарий к заказу</span>
+                                    <input class="form-entrance__input" id="namecl-enter1__" autocomplete="on" type="text" required
+                                           minlength="2" placeholder="">
+                                </div>
+                                <div class="form-entrance__submit">
+                                    <button class="form-entrance__sub" type="submit" id="submit-enter_"><span>Подтвердить заказ</span></button>
+                                    <button class="form-entrance__sub form-entrance__sub--change" type="button"><span>Редактировать заказ</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        </div>
+        <div class="partners-closed">
+            <span>Закрыть<i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="container">
+        <div class="header-box">
+            <div class="header-logo-box">
+                <a href="index.html" class="header__logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <span>© 2019 ОАЗИС-С</span>
+            </div>
+
+            <div class="header__menu header__menu--hidden">
+                <div class="header__menu__box">
+                    <ul class="header__menu__list">
+                        <li class="header__menu__item"><a class="header__menu__link" href="production.html">Продукция</a></li>
+                        <li class="header__menu__item"><a class="header__menu__link" href="about.html">О компании</a></li>
+                        <li class="header__menu__item active"><a class="header__menu__link" href="training.html">Обучение</a></li>
+                        <li class="header__menu__item"><a class="header__menu__link" href="partners.html">Партнеры</a></li>
+                        <li class="header__menu__item"><a class="header__menu__link" href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__social">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script src="js/fm.revealator.jquery.js"></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<!--<script src="js/jquery-1.11.3.min.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
